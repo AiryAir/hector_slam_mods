@@ -1,0 +1,16 @@
+git clone https://github.com/Slamtec/rplidar_ros
+git clone https://github.com/tu-darmstadt-ros-pkg/hector_slam
+
+sudo apt install ros-noetic-hector-slam
+
+catkin_make
+source devel/setup.bash
+
+modify files (in repo hector_slam_mod)
+https://www.youtube.com/watch?v=Qrtz0a7HaQ4
+
+roslaunch rplidar_ros rplidar.launch
+roslaunch hector_slam_launch tutorial.launch
+
+this should launch rviz with laserscan, tf and path topics
+catkin_make --pkg <package> doesnt work, needs to be done for the entire ws folder
